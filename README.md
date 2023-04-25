@@ -1,4 +1,4 @@
-# Additional C++ Exercises!
+# More C++ Templates!
 This repository contains a selection of extra exercises on C++ templates, made for Prof. Azhar's CSC211H course at BMCC.
 
     
