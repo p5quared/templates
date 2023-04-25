@@ -1,60 +1,46 @@
-# C++ Templates
-Templates are a powerful feature in C++ that allow for generic programming, which enables writing code that can work with different types without having to explicitly specify them. Templates provide a way to define generic classes, functions, or type aliases that can work with multiple data types, providing flexibility and reusability in code.
+# Additional C++ Exercises!
+This repository contains a selection of extra exercises on C++ templates, made for Prof. Azhar's CSC211H course at BMCC.
 
-**Why are Templates Useful?**
-Templates are useful because they allow for code reuse and reduce code duplication. With templates, you can define a generic algorithm or data structure that can be used with different types of data, without having to write multiple versions of the same code for each specific type. This can greatly improve code maintainability, as changes only need to be made in one place instead of multiple places.
+    
+## How to use this Repo
+1. Fork this repository to your own GitHub account.
+2. Clone your forked repository to your local machine.
+3. Enter any of the exercise directories and follow the instructions in each file.
+   1. You will usually define functions in a separate file, but can test them yourself in the main function or use the
+   provided test executable.
+   
+## Build
+This repository relies on CMake to build the code. You can install CMake from [here](https://cmake.org/download/) if
+you are running this on your own computer and do not already have CMake installed. If you are using Repl.it, read the
+instructions following.
 
-Another benefit of templates is that they enable writing generic code that can adapt to different data types at compile-time, which can lead to optimized code without the overhead of runtime type checks or polymorphism.
+1. Create a build directory in the root of the repository.
+2. Run `cmake ..` in the build directory.
+3. Run `make` in the build directory. (Every time you want to recompile)
+4. Run the appropriate executable in the build directory.
+    1. Each exercise produces two executables: one with your own main function and one for testing purposes.
+   2. The testing executable will be called `<exercise_name>_test`, and main will be called `<exercise_name>`.
 
-**How do Templates Work during Compilation and Linking?**
-Templates in C++ are generated at compile-time, which means that the compiler generates the appropriate code for each specific instantiation of the template. This is known as template instantiation. When a template is used with a specific type, the compiler generates the necessary code for that type by substituting the template parameters with the actual types.
-
-Template code is usually defined in header files, as the definitions need to be available at the point of instantiation, which is where the template is used with a specific type. The compiler generates the template code during compilation, and the generated code is then linked with the rest of the program during the linking phase to produce the final executable.
-
-It's important to note that template code is not actually compiled until it is instantiated with a specific type. This means that if a template is defined but not used in a program, it will not generate any code in the final executable, helping to keep the executable size minimal.
-
-## Template Examples
-### Function Template Example
-```cpp
-// Function template for finding the maximum of two values
-template <typename T>
-T findMin(T a, T b) {
-    return (a < b) ? a : b;
-}
-
-int main() {
-    int maxInt = findMax(5, 10);         // Template instantiated with int
-    double maxDouble = findMax(3.14, 2.5); // Template instantiated with double
-    return 0;
-}
+Aka:
+```bash
+mkdir build
+cd build
+cmake ..
+make
 ```
-In this example, we define a function template findMax() that takes two arguments of type T (which is a template parameter representing a generic type) and returns the maximum value. The function template is then instantiated with both int and double types in the main() function.
-### Class Template Example
-```cpp
-// Class template for a simple stack
-template <typename T>
-class Stack {
-public:
-    void push(T value) {
-        // Implementation of push operation
-    }
 
-    T pop() {
-        // Implementation of pop operation
-        return T();
-    }
 
-private:
-    // Implementation details
-};
+### Repl.it Instructions
+If you are using Repl.it, you may get a warning that CMake is not installed. You can ignore this warning, as CMake is
+installed on the Repl.it servers. When you run `cmake ..`, just press enter to accept the default CMake option, and
+then press enter again to accept the default build type if prompted.
 
-int main() {
-    Stack<int> intStack;       // Template instantiated with int
-    Stack<double> doubleStack; // Template instantiated with double
-    return 0;
-}
-```
-In this example, we define a class template Stack that represents a simple stack data structure. The class template has a template parameter T that represents the type of elements stored in the stack. The class template is then instantiated with both int and double types in the main() function to create two different stacks with different element types.
+## Running Tests
+There are two aptly named targets generated: `templates` and `templates_test`. Run these as any executable in the build directory.
+(`templates` is an executable using `main.cpp` so run this if you'd like to test some things yourself.)
 
-### Conclusion
-Templates in C++ are a powerful feature that allow for generic programming, enabling code reuse and flexibility. They are compiled at compile-time, and the template code is generated during
+To run a specific test, run `<test-name> "[<tag1>][<tag2>]..."`.
+For example, to run the easy tests in templates, run `templates "[easy]"`.
+To run a specific NAMED test (not by tag), run `<test-name> "<test-name>"`.
+
+Tests with these capabilities will have the tags listed clearly in the exercise.
