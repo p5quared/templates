@@ -43,3 +43,21 @@
 // (https://en.wikipedia.org/wiki/Dot_product)
 // The function MUST be called dot_product, and take ONLY two parameters, two arrays representing the vectors.
 // implement WITHOUT passing a size parameter to the function, (this should work for any size array).
+
+
+/* For various reasons, we will not use the testing for this problem and instead just confirm with main and cout.
+ * If you create this correctly though you can uncomment the tests in test/templates_test.cpp to test your code if you
+ * please.
+ 
+        int a[] = {1, 2, 3, 4, 5};
+        int b[] = {1, 2, 3, 4, 5};
+        dotProduct(a, b) == 55
+        
+        double a[] = {1.0, 2.0, 3.0, 4.0, 5.0};
+        double b[] = {1.0, 2.0, 3.0, 4.0, 5.0};
+        dotProduct(a, b) == 55.0;
+        
+        float a[] = {1.0f, 2.0f, 3.0f, -4.0f, 5.0f};
+        float b[] = {1.0f, -2.0f, 3.0f, 4.0f, -5.0f};
+        dotProduct(a, b) == -35.0f;
+ * */
