@@ -45,9 +45,9 @@
 // implement WITHOUT passing a size parameter to the function, (this should work for any size array).
 
 
-/* For various reasons, we will not use the testing for this problem and instead just confirm with main and cout.
- * If you create this correctly though you can uncomment the tests in test/templates_test.cpp to test your code if you
- * please.
+/*   For most of these tests, you should just use your own testing/intuition to verify.
+ *   For the HARD problem, I have made a couple example inputs for you to look at and/or use:
+ *
  
         int a[] = {1, 2, 3, 4, 5};
         int b[] = {1, 2, 3, 4, 5};
