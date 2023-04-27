@@ -22,26 +22,41 @@
 
 /*******EASY********/
 // Implement a function that returns the sum of two values.
-// the function MUST be called sum, and take two parameters.
+// the function should take two parameters.
 
+/* EXAMPLE I/O
+ * sum(1, 2) == 3
+ * sum(2.1, 1.9) == 4.0
+ * sum(std::string("abra"), std::string("cadabra")) == "abracadabra"
+ */
 
 
 /*******EASY********/
 // Implement a function that returns the greater of two values.
-// the function MUST be called greatest, and take two parameters.
+// the function should take two parameters.
+
+/* EXAMPLE I/O
+ * greatest(1, 2) == 2
+ * greatest(2.1, 1.9) == 2.1
+ * greatest(1, 1) == 1
+ */
 
 
 
 /********MEDIUM********/
 // Implement a function that returns the sum of all values in a vector.
-// the function MUST be called sum_vector, and it MUST be a template function.
+// the function should take one parameter, a vector of any type.
 
+/* EXAMPLE I/O
+ * std::vector<int> v = {1, 2, 3, 4, 5};
+ * sum_vector(v) == 15
+ */
 
 
 /********HARD********/
 // Implement a function that returns the dot product of two vectors (math/physics vectors, not std::vector).
 // (https://en.wikipedia.org/wiki/Dot_product)
-// The function MUST be called dot_product, and take ONLY two parameters, two arrays representing the vectors.
+// The function should take ONLY two parameters: two arrays representing the vectors.
 // implement WITHOUT passing a size parameter to the function, (this should work for any size array).
 
 
